@@ -1,12 +1,16 @@
-let mix = require('laravel-mix')
-
-require('./nova.mix')
+let mix = require('laravel-mix');
+let path = require('path');
 
 
 mix.js('resources/js/field.js', 'dist/js').vue({ version: 3 })
-    .nova('juancamunozfp/nova-url-field')
+    .alias({
+        'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
+    })
     .webpackConfig({
-        resolve: {
-            symlinks: false
-        }
+        externals: {
+            vue: 'Vue',
+        },
+        output: {
+            uniqueName: 'inspheric/nova-url-field',
+        },
     })
