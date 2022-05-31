@@ -1,9 +1,9 @@
 <template>
-    <panel-item :field="field">
+    <PanelItem :field="field">
         <template slot="value">
             <url-field :field="field" :clickable="field.clickable"></url-field>
         </template>
-    </panel-item>
+    </PanelItem>
 </template>
 
 <script>
