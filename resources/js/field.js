@@ -1,5 +1,5 @@
 Nova.booting((Vue) => {
-    Nova.inertia('index-url-field', require('./components/IndexField').default)
-    Nova.inertia('detail-url-field', require('./components/DetailField').default)
-    Nova.inertia('form-url-field', require('./components/FormField').default)
+    Vue.component('index-url-field', require('./components/IndexField').default)
+    Vue.component('detail-url-field', require('./components/DetailField').default)
+    Vue.component('form-url-field', require('./components/FormField').default)
 })
