@@ -1,6 +1,6 @@
 <template>
-    <PanelItem :field="field">
-        <template slot="value">
+    <PanelItem :index="index" :field="field">
+        <template #value>
             <url-field :field="field" :clickable="field.clickable"></url-field>
         </template>
     </PanelItem>
@@ -10,7 +10,7 @@
 import Url from './Url'
 
 export default {
-    props: ['resource', 'resourceName', 'resourceId', 'field'],
+    props: ['index', 'resource', 'resourceName', 'resourceId', 'field'],
 
     components: {
         'url-field': Url

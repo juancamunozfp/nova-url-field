@@ -1,6 +1,6 @@
 <template>
-    <DefaultField :field="field" :errors="errors">
-        <template slot="field">
+    <DefaultField :field="currentField" :errors="errors" :show-help-text="showHelpText">
+        <template #field>
             <input
                 class="w-full form-control form-input form-input-bordered"
                 :id="field.attribute"
